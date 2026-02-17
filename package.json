@@ -1,0 +1,51 @@
+{
+  "name": "miniprogram-automator-mcp",
+  "version": "0.1.0",
+  "description": "基于 miniprogram-automator 的微信小程序 MCP Server（面向 Agent 交互）",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "miniprogram",
+    "wechat",
+    "automator",
+    "agent"
+  ],
+  "bin": {
+    "miniprogram-automator-mcp": "./bin/miniprogram-automator-mcp.js"
+  },
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "bun run index.ts",
+    "start": "bun run index.ts",
+    "build": "tsup",
+    "prepublishOnly": "bun run build",
+    "typecheck": "tsc --noEmit",
+    "check": "bun run typecheck"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "commander": "^14.0.3",
+    "miniprogram-automator": "^0.12.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsup": "^8.5.1"
+  }
+}
