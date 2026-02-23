@@ -1,6 +1,6 @@
 {
   "name": "miniprogram-automator-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "基于 miniprogram-automator 的微信小程序 MCP Server（面向 Agent 交互）",
   "type": "module",
   "private": false,
